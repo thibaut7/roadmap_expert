@@ -7,10 +7,12 @@ This repo serves as a collection of code, notes, and experiments as I explore ke
 
 ## 📂 Repository Structure
 
-- **`CS221/`** – Coursework, assignments, and implementations from [Stanford’s CS221: Artificial Intelligence: Principles and Techniques](https://web.stanford.edu/class/cs221/).  
-- **`projects/`** – Personal projects and experiments applying AI techniques to real-world problems.  
-- **`notes/`** – Summaries, explanations, and insights gathered during my studies.  
-- **`utils/`** – Helper scripts, utilities, and reusable components.
+.
+├── README.md              # Overview of the repository
+├── Stanford/                 # Work related to Stanford CS221 course
+│   └── CS221/          # Coursework, assignments, and implementations from [Stanford’s CS221: Artificial Intelligence: Principles and Techniques](https://web.stanford.edu/class/cs221/). 
+├── projects/              # Personal AI projects and experiments
+├── notes/                 # Study notes and explanations
 
 ---
 

@@ -35,7 +35,7 @@ This repo serves as a collection of code, notes, and experiments as I explore ke
 
 1. Clone the repository:  
    ```bash
-   git clone https://github.com/your-username/ai-learning-journey.git
+   https://github.com/thibaut7/roadmap_expert.git
    ```
 2. Navigate to the desired folder (e.g., `CS221/`).  
 3. Run scripts or notebooks with Python 3.x.  

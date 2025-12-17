@@ -12,22 +12,28 @@ class Transportation:
         if state*2 <= self.N:
             result.append(('tram', state*2))
         return result
-#problem = Transportation(N=6)
+#problem = Transportation(N=4)
 #print(problem.SuccAction(1))
 #Main
 def Backtracking(problem):
         ## potential state
-        history = {}
-        def backtrack(state):
-            #print(state)
-            result = problem.SuccAction(state)
-            history[state] = result
-            print(result)
+        best_cost = float('inf')
+        best_path = []
+        def backtrack(state, current_path, current_cost):
+            nonlocal best_cost, best_path
             if problem.EndState(state):
-                print('fin')
+                if current_cost < best_cost:
+                    best_cost = current_cost
+                    best_path = list(current_path)
+                print('END')
+                current_path = []
                 return
-            for state in result:
-                print(state)
-                backtrack(state[1])
-        backtrack(problem.StartState())
-print(Backtracking(Transportation(6)))
+            result = problem.SuccAction(state)
+            current_cost = current_cost + 1
+            for action, state in result:
+                current_path.append((action,state))
+                backtrack(state, current_path, current_cost)
+                current_path.pop()
+            return best_cost, best_path
+        print(backtrack(problem.StartState(), current_path=[], current_cost=0))
+print(Backtracking(Transportation(4)))

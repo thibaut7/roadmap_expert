@@ -25,7 +25,7 @@ def Backtracking(problem):
                 if current_cost < best_cost:
                     best_cost = current_cost
                     best_path = list(current_path)
-                print('END')
+                print(current_path)
                 current_path = []
                 return
             result = problem.SuccAction(state)
@@ -36,4 +36,4 @@ def Backtracking(problem):
                 current_path.pop()
             return best_cost, best_path
         print(backtrack(problem.StartState(), current_path=[], current_cost=0))
-print(Backtracking(Transportation(4)))
+print(Backtracking(Transportation(10)))
